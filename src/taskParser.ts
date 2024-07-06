@@ -522,8 +522,7 @@ export class TaskParser   {
           }
           localDateString = localDateString;
           let localDateObj = new Date(localDateString);
-          let ISOString = localDateObj.toISOString()
-          let utcDateString = ISOString.slice(0,10)
+          let utcDateString = localDateObj.toISOString()
           return(utcDateString);
         } catch (error) {
           console.error(`Error extracting date from string '${localDateString}': ${error}`);
